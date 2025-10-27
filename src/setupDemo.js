@@ -1,7 +1,3 @@
-// Demo user setup script
-// This will be automatically loaded when the app starts
-
-// Create demo user if not exists
 const setupDemoUser = () => {
   const users = JSON.parse(localStorage.getItem("ticketapp_users") || "[]");
 
@@ -16,7 +12,6 @@ const setupDemoUser = () => {
     console.log("✅ Demo user created: demo@ticket.com / demo123");
   }
 
-  // Create some demo tickets if none exist
   const tickets = JSON.parse(localStorage.getItem("ticketapp_tickets") || "[]");
 
   if (tickets.length === 0) {
@@ -56,5 +51,4 @@ const setupDemoUser = () => {
   }
 };
 
-// Run setup
 setupDemoUser();

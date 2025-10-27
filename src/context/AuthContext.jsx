@@ -15,7 +15,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Check for existing session on mount
     const session = localStorage.getItem('ticketapp_session')
     if (session) {
       try {
@@ -29,10 +28,8 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const login = async (email, password) => {
-    // Simulate API call
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // Mock validation
         const mockUsers = JSON.parse(localStorage.getItem('ticketapp_users') || '[]')
         const foundUser = mockUsers.find(u => u.email === email && u.password === password)
         
@@ -54,12 +51,10 @@ export const AuthProvider = ({ children }) => {
   }
 
   const signup = async (name, email, password) => {
-    // Simulate API call
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const mockUsers = JSON.parse(localStorage.getItem('ticketapp_users') || '[]')
         
-        // Check if user already exists
         if (mockUsers.find(u => u.email === email)) {
           reject(new Error('User with this email already exists'))
           return

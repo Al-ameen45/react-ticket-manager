@@ -8,16 +8,13 @@ const Dashboard = () => {
   const { getTicketStats } = useTickets()
   const navigate = useNavigate()
 
-  // Get current ticket statistics
   const ticketStats = getTicketStats()
 
-  // Handle user logout
   const handleLogout = () => {
     logout()
     navigate('/')
   }
 
-  // Define stat card configurations
   const statisticCards = [
     {
       title: 'Total Tickets',
@@ -43,7 +40,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      {/* Navigation Bar */}
       <nav className="navbar">
         <div className="navbar-content">
           <Link to="/dashboard" className="navbar-brand">
@@ -63,10 +59,8 @@ const Dashboard = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
       <div className="page-container">
         <div className="app-container">
-          {/* Welcome Section */}
           <div style={{ marginBottom: '2rem' }}>
             <h1 className="page-title">Welcome back, {user?.name}! 👋</h1>
             <p style={{ fontSize: '1.125rem', color: '#6b7280' }}>
@@ -74,7 +68,6 @@ const Dashboard = () => {
             </p>
           </div>
 
-          {/* Statistics Grid */}
           <div className="stats-grid">
             {statisticCards.map((stat, index) => (
               <div key={index} className="stat-card" style={stat.style}>
@@ -84,7 +77,6 @@ const Dashboard = () => {
             ))}
           </div>
 
-          {/* Quick Actions Section */}
           <div style={{ marginTop: '3rem' }}>
             <div className="card">
               <h2 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>
@@ -104,13 +96,11 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Recent Activity Section */}
           <div style={{ marginTop: '3rem' }}>
             <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>
               Recent Activity
             </h2>
             <div className="grid grid-2">
-              {/* System Status Card */}
               <div className="card">
                 <h3 style={{ 
                   fontSize: '1.25rem', 
@@ -124,7 +114,6 @@ const Dashboard = () => {
                 </p>
               </div>
 
-              {/* Performance Card */}
               <div className="card">
                 <h3 style={{ 
                   fontSize: '1.25rem', 

@@ -4,16 +4,13 @@ import Footer from '../components/Footer'
 const LandingPage = () => {
   const navigate = useNavigate()
 
-  // Handle signup button click
   const handleGetStarted = () => {
     navigate('/auth/signup')
   }
 
   return (
     <div>
-      {/* Hero Section with wavy background */}
       <div className="hero-section">
-        {/* Decorative background circles */}
         <div className="decorative-circle circle-1"></div>
         <div className="decorative-circle circle-2"></div>
         
@@ -24,7 +21,6 @@ const LandingPage = () => {
             Track, organize, and resolve tickets with ease across multiple platforms.
           </p>
           
-          {/* Call-to-action buttons */}
           <div className="hero-buttons">
             <Link to="/auth/login" className="btn btn-primary">
               Login
@@ -36,9 +32,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Main content section */}
       <div className="app-container" style={{ padding: '60px 20px' }}>
-        {/* Section heading */}
         <h2 style={{ 
           textAlign: 'center', 
           fontSize: '2.5rem', 
@@ -47,9 +41,7 @@ const LandingPage = () => {
           Why Choose Ticket Manager?
         </h2>
         
-        {/* Feature cards grid */}
         <div className="grid grid-3">
-          {/* Easy Organization Feature */}
           <div className="card">
             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📋</div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
@@ -61,7 +53,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Lightning Fast Feature */}
           <div className="card">
             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⚡</div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
@@ -73,7 +64,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* Secure & Reliable Feature */}
           <div className="card">
             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
@@ -86,7 +76,6 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Bottom call-to-action section */}
         <div style={{ textAlign: 'center', marginTop: '4rem' }}>
           <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>
             Ready to Get Started?
