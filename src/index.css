@@ -1,47 +1,26 @@
-/* ============================================
-   GLOBAL STYLES & RESET
-   ============================================ */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ============================================
-   CSS CUSTOM PROPERTIES (VARIABLES)
-   ============================================ */
-
 :root {
-  /* Layout */
   --max-width: 1440px;
   --border-radius: 12px;
   --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-  /* Colors - Primary */
   --primary-color: #4f46e5;
   --secondary-color: #7c3aed;
-
-  /* Colors - Status */
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --danger-color: #ef4444;
-
-  /* Colors - Neutral */
   --gray-color: #6b7280;
   --light-gray: #f3f4f6;
   --dark-text: #1f2937;
-
-  /* Colors - Ticket Status */
   --status-open: #10b981;
   --status-in-progress: #f59e0b;
   --status-closed: #6b7280;
 }
-
-/* ============================================
-   BASE TYPOGRAPHY & BODY
-   ============================================ */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -54,19 +33,11 @@ body {
   background-color: #ffffff;
 }
 
-/* ============================================
-   LAYOUT CONTAINERS
-   ============================================ */
-
 .app-container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* ============================================
-   HERO SECTION
-   ============================================ */
 
 .hero-section {
   position: relative;
@@ -76,7 +47,6 @@ body {
   overflow: hidden;
 }
 
-/* Wavy bottom border for hero section */
 .hero-section::after {
   content: "";
   position: absolute;
@@ -89,7 +59,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Decorative background circles */
 .decorative-circle {
   position: absolute;
   border-radius: 50%;
@@ -111,7 +80,6 @@ body {
   left: -50px;
 }
 
-/* Hero content styling */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -133,7 +101,6 @@ body {
   opacity: 0.95;
 }
 
-/* Hero button container */
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -147,12 +114,6 @@ body {
   text-align: center;
   white-space: nowrap;
 }
-
-/* ============================================
-   BUTTON COMPONENTS
-   ============================================ */
-
-/* Base button styles */
 .btn {
   padding: 12px 32px;
   border: 2px solid transparent;
@@ -166,13 +127,11 @@ body {
   display: inline-block;
 }
 
-/* Button focus state for accessibility */
 .btn:focus {
   outline: 3px solid rgba(79, 70, 229, 0.5);
   outline-offset: 2px;
 }
 
-/* Primary button - Blue background, white text */
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
@@ -185,7 +144,6 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Secondary button - Transparent with white border (for hero section) */
 .btn-secondary {
   background-color: transparent;
   color: white;
@@ -197,7 +155,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Danger button - Red styling */
 .btn-danger {
   background-color: var(--danger-color);
   color: white;
@@ -207,7 +164,6 @@ body {
   background-color: #dc2626;
 }
 
-/* Success button - Green styling */
 .btn-success {
   background-color: var(--success-color);
   color: white;
@@ -217,17 +173,11 @@ body {
   background-color: #059669;
 }
 
-/* Small button variant */
 .btn-small {
   padding: 8px 16px;
   font-size: 0.875rem;
 }
 
-/* ============================================
-   CARD COMPONENTS
-   ============================================ */
-
-/* Base card styling */
 .card {
   background: white;
   border-radius: var(--border-radius);
@@ -242,22 +192,15 @@ body {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* ============================================
-   GRID LAYOUT SYSTEM
-   ============================================ */
-
-/* Base grid container */
 .grid {
   display: grid;
   gap: 24px;
 }
 
-/* Two column grid */
 .grid-2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Three column grid */
 .grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
